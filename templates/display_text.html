@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webpage to text convertor</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css')}}"
+</head>
+<body id="display-body">
+    <h1 id="display-h1">Extracted Text</h1>
+    <div id="display-container">
+        <div class="display-btns">
+            <div>
+            <button class="copy-btn" onclick="copyText()">Copy Text</button>
+        </div>
+        <div>
+            <form action="/" method="get">
+                <button type="submit">Back</button>
+            </form>
+        </div>
+        </div>
+        <div>
+            <table class="csv-table">
+                <tr>
+                    <td>{{ text }}</td>
+                </tr>
+            </table>
+        </div>
+</div>
+
+    <script>
+        function copyText() {
+            var textElement = document.querySelector('.csv-table td');
+            var text = textElement.innerText || textElement.textContent;
+            navigator.clipboard.writeText(text)
+                .then(() => alert('Text copied to clipboard'))
+                .catch((error) => console.error('Could not copy text: ', error));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+body{
+    margin: 0 auto;
+    background-color: #E7B91B;
+}
+h1 {
+    color: #111; 
+    font-family: 'Helvetica Neue', 
+    sans-serif; 
+    font-size: 155px; 
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1; 
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+h2 { 
+    color: #111; 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 1.5rem; 
+    font-weight: 300; 
+    line-height: 32px; 
+    margin: 0 0 32px; 
+    text-align: center; 
+
+}
+
+.input, 
+input {
+    font-size: 22px;
+    align-items: center;
+}
+
+input {
+    width: 400px;
+    border-radius: 4px;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 30px auto;
+}
+
+button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+button:hover:after {
+  transform: translate(0, 0);
+}
+
+button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 0 40px;
+  }
+}
+
+#display-h1{
+    font-size: 100px;
+    margin-top: 70px;
+}
+
+.display-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+table{
+    border: 1px solid rgb(144, 140, 140);
+    width: 800px;
+    text-wrap: wrap;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+#display-body{
+    background-color: wheat;
+}
